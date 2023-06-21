@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej5-Grupo10-ComsD</title>
+  <link rel="stylesheet" href="../css/estiloej1.css">
+</head>
+<body>
+  <h1>Resultados:</h1>
+  <p id="notas"></p>
+  <p id="resultadoA"></p>
+  <p id="resultadoB"></p>
+
+  <script>
+    var grupoTP = ['Juan Perez', 8, 'Samuel Lopez', 7.80, 'Maria Gonzalez', 5.34, 'Analía Tolaba', 3.25];
+    document.getElementById("notas").textContent = "Las notas ingresadas son: " + grupoTP;
+
+    var sumatoriaNotas = 0;
+    var cantidadNotas = 0;
+
+    for (var i = 1; i < grupoTP.length; i += 2) {
+      if (typeof grupoTP[i] === 'number') {
+        sumatoriaNotas += grupoTP[i];
+        cantidadNotas++;
+      }
+    }
+
+    var promedioNotas = sumatoriaNotas / cantidadNotas;
+    document.getElementById("resultadoA").textContent = "El promedio de las notas es: " + promedioNotas;
+
+    var notaMasAlta = -Infinity;
+    var notaMasBaja = Infinity;
+
+    for (var i = 1; i < grupoTP.length; i += 2) {
+      if (typeof grupoTP[i] === 'number') {
+        if (grupoTP[i] > notaMasAlta) {
+          notaMasAlta = grupoTP[i];
+        }
+        if (grupoTP[i] < notaMasBaja) {
+          notaMasBaja = grupoTP[i];
+        }
+      }
+    }
+
+    document.getElementById("resultadoB").textContent = "La nota más alta es: " + notaMasAlta + ", y la nota más baja es: " + notaMasBaja;
+  </script>
+</body>
+</html>

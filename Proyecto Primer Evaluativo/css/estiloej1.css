@@ -1,0 +1,13 @@
+h1{
+    color: rgb(114, 76, 50);
+    font-weight: 500;
+    font-size: 3rem;
+    padding-left: 30rem;
+}
+
+p{
+    color: rgb(63, 59, 59);
+    font-weight: 500;
+    font-size: 1rem; 
+    padding-right: 0;
+}

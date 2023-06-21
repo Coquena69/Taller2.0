@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej6-Grupo10-ComsD</title>
+  <link rel="stylesheet" href="../css/estiloej1.css">
+</head>
+<body>
+  <h1>Búsqueda de Código</h1>
+  <label for="codigo">Ingrese un código (0 para finalizar): </label>
+  <input type="number" id="codigoInput">
+  <button onclick="cargarCodigo()">Cargar</button>
+  <br>
+  <label for="codigoRequerido">Ingrese el código que desea buscar: </label>
+  <input type="number" id="codigoRequeridoInput">
+  <button onclick="buscarCodigo()">Buscar</button>
+  <br>
+  <p id="resultado"></p>
+
+  <script>
+    var listaCodigos = [];
+
+    function cargarCodigo() {
+      var codigo = parseInt(document.getElementById("codigoInput").value);
+
+      if (codigo === 0) {
+        return;
+      }
+
+      listaCodigos.push(codigo);
+      document.getElementById("codigoInput").value = "";
+    }
+
+    function buscarCodigo() {
+      var codigoRequerido = parseInt(document.getElementById("codigoRequeridoInput").value);
+
+      var posicion = listaCodigos.indexOf(codigoRequerido);
+
+      if (posicion !== -1) {
+        document.getElementById("resultado").textContent = "El código " + codigoRequerido + " se encuentra en la posición " + posicion;
+      } else {
+        document.getElementById("resultado").textContent = "Código no cargado";
+      }
+    }
+  </script>
+</body>
+</html>

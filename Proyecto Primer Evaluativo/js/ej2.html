@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ej2</title>
+  <link rel="stylesheet" href="../css/estiloej1.css">
+</head>
+<body>
+  <h1>Concatenación de palabras</h1>
+  <p id="anterior">Texto = 'Hola','somos','el','grupo','10','Coquena'</p>
+  <p id="resultado"></p>
+
+  <script>
+    var palabras = ['Hola','somos','el','grupo','10','Coquena'];
+
+    var resultado = [];
+    for (var i = 0; i < palabras.length; i++) {
+     resultado.push(palabras[i]);
+    }
+    var textoConcatenado = resultado.join(' ');
+
+    document.getElementById("resultado").textContent = textoConcatenado;
+
+  </script>
+</body>
+</html>

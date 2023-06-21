@@ -1,0 +1,132 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    max-width: 80%;
+}
+
+header {
+    background-color: rgb(223, 241, 129);
+    position: relative;
+    margin: 0 auto;
+}
+header p{
+    position: absolute;
+    font-weight: bold;
+    font-family: 'Candara';
+    color: #040301;
+    padding-left: 200px;
+    text-align: center;
+    font-size: 2em;
+}
+
+nav{
+    position: relative;
+    padding-top: 100px;
+    margin: auto 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    height: 30px;
+    vertical-align: top;
+    overflow: hidden;
+    background-color: #48604d;
+    text-align: center;
+
+}
+
+nav li {
+    display: inline-block;
+    line-height: 30px;
+    vertical-align: top;
+}
+
+nav li a {
+    color: white;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: bold;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav li a:hover {
+    background-color: #8caecb;
+}
+
+.main-ul {
+    margin: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-areas:
+    'main1 main1 main1 buscar'
+    'main2 main2 main2 buscar'
+    'main3 main3 main3 buscar';
+    grid-template-rows: 50px auto;
+    padding-left: 0;
+
+}
+
+.boxes{
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    padding: 0.6% 0 0.6% 0.9% ;
+}
+.boxes h3{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.boxes p{
+    margin: 0;
+    font-size: 0.9em;
+    font-family: 'Times New Roman', Times, serif;
+}
+ul ul{
+    list-style-type: disc;
+}
+.boxes::marker {
+    color: #000000;
+} 
+
+#main1{
+    grid-area: main1;
+    color: rgb(127, 127, 127);
+    font-size: 0.8em;
+}
+#main2{
+    grid-area: main2;
+}
+#main3{
+    grid-area: main3;
+}
+.texto-dentro{
+    line-height: 120%;
+}
+.texto-dentro li{
+    height: 130%;
+}
+
+#buscar {
+    grid-area: buscar;
+    border-color: #000000;
+    border-width: 2px;
+    border-style: solid;
+    text-align: center;
+}
+#buscar input {
+    width: 85%;
+}
+#buscar p{
+    text-align: left;
+    padding-left: 6%;
+    margin-bottom: 2%;
+    margin-top: 6%;
+}
+footer{
+    background-color: rgb(129, 128, 128);
+    padding: 50px;
+    text-align: center;
+    vertical-align: middle;
+}
